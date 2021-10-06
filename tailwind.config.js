@@ -12,6 +12,9 @@ module.exports = {
         primary: colors['indigo'],
         secondary: colors['teal'],
       },
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif'],
+      },
     },
   },
   variants: {

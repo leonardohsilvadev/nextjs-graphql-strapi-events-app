@@ -6,8 +6,14 @@ const config: any = {
   useSystemColorMode: false,
 }
 
+const fonts = {
+  heading: `'DM Sans', sans-serif`,
+  body: `'DM Sans', sans-serif`,
+}
+
 const theme = extendTheme({
   config,
+  fonts,
   colors: {
     ...colors,
     body: colors.blueGray['100'],
