@@ -9,7 +9,7 @@
     "format": "prettier --write ./"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+    "src/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -22,12 +22,15 @@
     "@types/react": "^17.0.27",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "autoprefixer": "^10.3.7",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.26.1",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.0",
+    "postcss": "^8.3.9",
     "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.16",
     "typescript": "^4.4.3"
   }
 }
