@@ -1,2 +1,2 @@
-declare module "ramda";
-declare module "tailwindcss/colors";
+declare module 'ramda'
+declare module 'tailwindcss/colors'
