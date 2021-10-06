@@ -6,7 +6,7 @@
     "allowJs": true,
     "jsx": "preserve",
     "strict": true,
-    "jsxImportSource": "react",
+    "jsxImportSource": "@emotion/react",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
