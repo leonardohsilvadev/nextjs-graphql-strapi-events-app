@@ -9,7 +9,7 @@
     "format": "prettier --write ./"
   },
   "lint-staged": {
-    "src/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   },
   "dependencies": {
     "next": "11.1.2",
