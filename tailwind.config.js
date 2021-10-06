@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         ...colors,
+        body: colors.blueGray['100'],
         gray: colors.blueGray,
         primary: colors['indigo'],
         secondary: colors['teal'],
