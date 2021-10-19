@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "events",
   "info": {
-    "name": "Event"
+    "name": "Event",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -14,6 +15,52 @@
     "title": {
       "type": "string",
       "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "eventFormat": {
+      "type": "enumeration",
+      "enum": [
+        "PRESENTIAL",
+        "ONLINE"
+      ],
+      "required": true
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "createdEvents"
+    },
+    "participants": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "attendedEvents",
+      "dominant": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "comments": {
+      "via": "event",
+      "collection": "comments"
+    },
+    "host": {
+      "model": "user",
+      "via": "eventsAsHost",
+      "plugin": "users-permissions"
     }
   }
 }
