@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "eslint '**/*.{js,ts,tsx}' --fix",
-    "format": "prettier --write ./"
+    "format": "prettier --write ./",
+    "generate:codegen": "graphql-codegen"
   },
   "lint-staged": {
     "src/*.{js,jsx,ts,tsx}": "eslint --cache --fix"

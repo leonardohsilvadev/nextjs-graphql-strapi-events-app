@@ -3,6 +3,11 @@ import tw from 'twin.macro'
 import { Layout } from 'systems/Core'
 import { useQuery, gql } from '@apollo/client'
 import { Spinner } from '@chakra-ui/spinner'
+import { Event } from 'strapi-types'
+
+type QueryResult = {
+  events: Event[]
+}
 
 const EVENTS_QUERY = gql`
   query EventsQuery {
@@ -14,14 +19,14 @@ const EVENTS_QUERY = gql`
 `
 
 export default function Home() {
-  const { data, error, loading } = useQuery(EVENTS_QUERY)
+  const { data, loading } = useQuery<QueryResult>(EVENTS_QUERY)
 
   return (
     <Layout title="Events App">
         <div css={styles.root}>
           {loading ?
             <Spinner /> :
-            data?.events.map(({ id, title }: { id: number; title: string; }) => <h1>{id} : {title}</h1>)
+            data?.events.map(({ id, title }) => <h1>{id} : {title}</h1>)
           }
         </div>
     </Layout>
